@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0; }
+	
+	/* BACKGROUND */
+	
+html {
+	background-image: -webkit-linear-gradient( 0deg, #B0C4DE 0%, white 100%);
+	background-image: -moz-linear-gradient( 0deg, #B0C4DE 0%, white 100%);
+	background-image: -o-linear-gradient( 0deg, #B0C4DE 0%, white 100%);
+	background-image: linear-gradient( 0deg, #B0C4DE 0%, white 100%);
+}
+
+	/* EMBEDDED FONTS */
+
+@font-face {
+    font-family: 'GreyscaleBasic';
+    src: url('../fonts/GreyscaleBasic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreyscaleBasic';
+    src: url('../fonts/GreyscaleBasic-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GreyscaleBasic';
+    src: url('../fonts/GreyscaleBasic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreyscaleBasic';
+    src: url('../fonts/GreyscaleBasic-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Burlington Script';
+    src: url('../fonts/SFBurlingtonScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Burlington Script';
+    src: url('../fonts/SFBurlingtonScript-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Burlington Script';
+    src: url('../fonts/SFBurlingtonScript-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Burlington Script';
+    src: url('../fonts/SFBurlingtonScript-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+	/* CONTAINERS */
+			
+body {
+	font-size: 115%;
+	font-family: 'GreyscaleBasic', sans-serif;
+}
+			
+#wrapper {
+	width: 940px;
+	margin: 0 auto;		
+}
+		
+header {
+	background: rgba(255, 255, 255, 40%);
+	padding-bottom: .5em;
+	border-radius: 10px;
+	width: 550px;
+	margin: 0 auto;
+}
+
+header h1 {
+	font-family: 'SF Burlington Script', sans-serif;
+	font-size: 5em;
+	text-align: center;
+}
+		
+			/* navigation menu */
+		
+nav#primary {
+	height: 50px;
+	line-height: 50px;
+}
+	
+nav#primary li {
+	float: left;
+	display: block;
+	width: 20%;
+	list-style-type: none;
+	text-align: center;
+}
+		
+nav#primary a {
+	text-decoration: none;
+	display: block;
+}
+		
+nav#primary a:hover {
+	background-color: black;
+	color: #fff;
+}
+
+nav#primary ul {
+	position: relative; /* so submenus can be positioned */
+	width: 100%; 
+	margin: 0 auto;
+}
+
+nav#primary ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 20%;
+	background-color: rgba(255,255,255,95%);
+}
+
+nav#primary ul ul li { 
+	float: none;  /* submenu items display vertically */
+	font-size: 1em;
+	width: 100%;
+	text-align: center;
+}
+
+nav#primary ul li:hover > ul {  /*submenu only when opening li is hovered */
+	display: block;
+}
+
+nav#primary > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body.bio nav>ul>li:nth-child(1) {
+	background: rgba(255,255,255,50%); } /* the child selector fixes the inheritance problem */
+
+
+body.artworks nav>ul>li:nth-child(2) { background: rgba(255,255,255,40%); }
+
+body.purchase nav>ul>li:nth-child(3) { background: rgba(255,255,255,40%); }
+
+body.news nav>ul>li:nth-child(4) { background: rgba(255,255,255,40%); }
+
+body.contact nav>ul>li:nth-child(5) { background: rgba(255,255,255, 40%); }
+		
+			/* aside */
+		
+aside {
+	width: 260px;
+	float: right;
+	padding: .5em;
+}
+
+body.home aside { width: 320px; }
+		
+			/* main */
+		
+main {
+	width: 640px;
+	float: left;
+	padding: .5em;
+}
+
+body.home main { width: 580px; }
+
+main h2 { padding: .5em 0; }
+
+		/* footer */
+		
+footer {
+	width: 100%;
+	background-color: #777;
+	clear: both;
+	height: 2em;
+}
+
+footer li {
+	float: left;
+	margin: 0 2em;
+	width: 15%;
+	font-size: .8em;
+	list-style-type: none;
+	line-height: 2.5em;
+}
+
+	/* ELEMENTS */
+	
+p {
+	line-height: 1.5em;
+	margin-bottom: 1.5em; }
+		
+p.valid {
+	padding: 20px ;
+	display: block;
+	text-align: center;
+	font-size: .8em;
+}
+		
+img.html {
+	display: block;
+	margin: 0 auto 20px auto;
+	width: 50px;
+}
+
+img.main {
+	display: block;
+	width: 170px;
+	margin: 1em auto 0 auto;
+	border-radius: 20px; }
+	
+img.facebook {
+	position:fixed;
+	top:30px;
+	right:30px;
+	width: 40px;
+}
+
+img.insta {
+	position:fixed;
+	top:80px;
+	right:20px;
+	width: 60px;
+}
+
+h1 a, h1 a:hover, h1 a:focus { color: black; }
+
+a { 
+	text-decoration: none;
+	color: #2445a8; }
+
+a:hover, a:focus { color: #668cff; }
+
+body.purchase aside ul { 
+	margin: 1em;
+	border: 5px dashed navy;
+	padding: 1em;
+	width: auto;}
+
+body.purchase aside li { 
+	padding: 1em;
+	list-style: inside square;
+	font-weight: bold;
+	height: 1.5em;
+	line-height: 1.5em;}
+
+	
+
+		
+		
